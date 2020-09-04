@@ -1,7 +1,7 @@
 <div class="container">
     <div class="container-border row">
         <div class="icon col-1.8"></div>
-        <textarea class="post-container col-9" rows="4"></textarea>
-        <button class="btn btn-primary tweet-btn">Tweet</button>
+        <textarea class="post-container col-9" rows="4" [(ngModel)]="tweet"></textarea>
+        <button class="btn btn-primary tweet-btn" (click)="postTweet()">Tweet</button>
     </div>
 </div>

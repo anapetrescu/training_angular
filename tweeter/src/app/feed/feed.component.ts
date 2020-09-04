@@ -6,8 +6,26 @@ import { FeedService } from './feed.service';
   templateUrl: './feed.component.html',
   styleUrls: ['./feed.component.scss']
 })
-export class FeedComponent {
+export class FeedComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private feedService: FeedService
+  ) { }
+  
+  posts: Array<any>;
+  ngOnInit(): void {
+    this.getPosts();
+  }
+
+  newPost(newTweet) {
+    console.log(1, newTweet)
+    this.posts.unshift(newTweet);
+  }
+
+  getPosts() {
+    this.feedService.getPosts().subscribe(posts => {
+      this.posts = posts.reverse();
+    });
+  }
 
 }
