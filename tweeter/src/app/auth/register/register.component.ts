@@ -10,5 +10,21 @@ export class RegisterComponent {
   email: String;
   password: String;
   repeatPassword: String;
-  constructor() { }
+  constructor(
+    private authService: AuthService
+  ) { }
+
+  signUp() {
+    if(this.password === this.repeatPassword) {
+      const newUser = {
+        email: this.email,
+        password: this.password
+      };
+      this.authService.signUp(newUser).subscribe(response => {
+        this.email = "";
+        this.password = "";
+        this.repeatPassword = "";
+      })
+    }
+  }
 }
