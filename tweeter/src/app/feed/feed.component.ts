@@ -18,7 +18,6 @@ export class FeedComponent implements OnInit {
   }
 
   newPost(newTweet) {
-    console.log(1, newTweet)
     this.posts.unshift(newTweet);
   }
 

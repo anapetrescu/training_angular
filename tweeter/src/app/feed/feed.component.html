@@ -1,2 +1,2 @@
-<app-write-post></app-write-post>
-<app-posts></app-posts>
+<app-write-post (newPost)="newPost($event)"></app-write-post>
+<app-posts *ngFor="let userPost of posts" [post]="userPost.tweet"></app-posts>

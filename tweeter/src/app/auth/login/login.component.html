@@ -2,16 +2,16 @@
 <div class="p-4">
   <div>
     <label>Email address</label>
-    <input type="email" class="form-control" [(ngModel)]="email">
+    <input type="email" [(ngModel)]="email" class="form-control">
   </div>
   <div>
     <label>Password</label>
-    <input type="password" class="form-control" [(ngModel)]="password">
+    <input type="password" [(ngModel)]="password" class="form-control">
   </div>
-  <button class="btn btn-primary mt-2">Log in</button>
+  <button class="btn btn-primary mt-2" (click)="signin()">Log in</button>
 </div>
-<p class="error">All fields must be completed</p>
-<p class="error">This user does not exist</p>
+<p class="error" *ngIf="allFiledsNotCompleted">All fields must be completed</p>
+<p class="error" *ngIf="userDoesNotExists">This user does not exist</p>
 <div class="account">
-  <a>Don't have an account</a>
+  <a routerLink="/signup">Don't have an account</a>
 </div>

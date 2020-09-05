@@ -1,4 +1,67 @@
 {
-  "users": [],
-  "posts": []
+  "users": [
+    {
+      "email": "ana@gmail.com",
+      "password": "1234",
+      "id": 1
+    },
+    {
+      "email": "maria@gmail.com",
+      "password": "1234",
+      "id": 2
+    },
+    {
+      "email": "ana2",
+      "password": "1234",
+      "id": 3
+    },
+    {
+      "email": "ana2",
+      "password": "1234",
+      "id": 4
+    },
+    {
+      "email": "aa",
+      "password": "aa",
+      "id": 5
+    },
+    {
+      "email": "ana",
+      "password": "1",
+      "id": 6
+    },
+    {
+      "email": "ana",
+      "password": "ana",
+      "id": 7
+    },
+    {
+      "id": 8
+    },
+    {
+      "id": 9
+    }
+  ],
+  "posts": [
+    {
+      "tweet": "Ana are mere",
+      "user_id": "1",
+      "id": 1
+    },
+    {
+      "tweet": "Alt tweet",
+      "user_id": "1",
+      "id": 2
+    },
+    {
+      "tweet": "Ce faceti?",
+      "user_id": "1",
+      "id": 3
+    },
+    {
+      "tweet": "Ati inteles cum functioneaza Output?",
+      "user_id": "1",
+      "id": 4
+    }
+  ]
 }

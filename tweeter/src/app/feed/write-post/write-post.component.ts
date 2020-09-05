@@ -12,18 +12,17 @@ export class WritePostComponent implements OnInit {
     private feedService: FeedService
   ) { }
   tweet: string;
+  @Output() newPost = new EventEmitter<any>();
   ngOnInit(): void {
   }
 
   postTweet() {
-    console.log(localStorage.getItem("user_id"));
     const newTweet = {
-      tweet: this.tweet,
-      user_id: localStorage.getItem("user_id")
+      tweet: this.tweet
     }
-    console.log(newTweet);
     this.feedService.saveTweet(newTweet).subscribe(response => {
       this.tweet = "";
+      this.newPost.emit(newTweet);
     });
   }
 }
